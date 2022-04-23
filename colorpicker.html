@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color Picker</title>
+  </head>
+  <body>
+    <h1 id="colorpicker">learn with asadul</h1>
+    <input type="text" id="input" /><br />
+    <input type="color" id="color" />
+    <script>
+      let hexacolor = document.getElementById("input");
+      let color = document.getElementById("color");
+      color.addEventListener("input", function () {
+        var inputcolor = color.value;
+        hexacolor.value = inputcolor;
+        document.getElementById("colorpicker").style.color = inputcolor;
+        document.body.style.background = inputcolor;
+      });
+    </script>
+  </body>
+</html>
